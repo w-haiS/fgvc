@@ -1,0 +1,34 @@
+
+[95mStart Training 1 Epoch
+Traceback (most recent call last):
+  File "D:\documents\SelfFiles\zjut\VIM\code\FGVC-PIM\main.py", line 297, in <module>
+    main(args, tlogger)
+  File "D:\documents\SelfFiles\zjut\VIM\code\FGVC-PIM\main.py", line 249, in main
+    train(args, epoch, model, scaler, amp_context, optimizer, schedule, train_loader)
+  File "D:\documents\SelfFiles\zjut\VIM\code\FGVC-PIM\main.py", line 136, in train
+    outs = model(datas)
+  File "D:\environment\Anaconda3\envs\fgvc\lib\site-packages\torch\nn\modules\module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "D:\documents\SelfFiles\zjut\VIM\code\FGVC-PIM\models\pim_module\pim_module.py", line 404, in forward
+    x = self.forward_backbone(x)
+  File "D:\documents\SelfFiles\zjut\VIM\code\FGVC-PIM\models\pim_module\pim_module.py", line 383, in forward_backbone
+    return self.backbone(x)
+  File "D:\environment\Anaconda3\envs\fgvc\lib\site-packages\torch\nn\modules\module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "D:\documents\SelfFiles\zjut\VIM\code\FGVC-PIM\timm\models\swin_transformer.py", line 544, in forward
+    x = self.forward_features(x)
+  File "D:\documents\SelfFiles\zjut\VIM\code\FGVC-PIM\timm\models\swin_transformer.py", line 536, in forward_features
+    l3 = self.layers[2](l2)
+  File "D:\environment\Anaconda3\envs\fgvc\lib\site-packages\torch\nn\modules\module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "D:\documents\SelfFiles\zjut\VIM\code\FGVC-PIM\timm\models\swin_transformer.py", line 413, in forward
+    x = blk(x)
+  File "D:\environment\Anaconda3\envs\fgvc\lib\site-packages\torch\nn\modules\module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "D:\documents\SelfFiles\zjut\VIM\code\FGVC-PIM\timm\models\swin_transformer.py", line 293, in forward
+    attn_windows = self.attn(x_windows, mask=self.attn_mask)  # nW*B, window_size*window_size, C
+  File "D:\environment\Anaconda3\envs\fgvc\lib\site-packages\torch\nn\modules\module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "D:\documents\SelfFiles\zjut\VIM\code\FGVC-PIM\timm\models\swin_transformer.py", line 187, in forward
+    attn = attn.view(B_ // nW, nW, self.num_heads, N, N) + mask.unsqueeze(1).unsqueeze(0)
+RuntimeError: CUDA out of memory. Tried to allocate 62.00 MiB (GPU 0; 6.00 GiB total capacity; 5.22 GiB already allocated; 0 bytes free; 5.28 GiB reserved in total by PyTorch)

@@ -1,0 +1,21 @@
+{
+    "os": "Windows-10-10.0.22621-SP0",
+    "python": "3.9.16",
+    "heartbeatAt": "2023-04-12T08:11:49.360475",
+    "startedAt": "2023-04-12T08:11:48.073101",
+    "docker": null,
+    "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "gpu_count": 1,
+    "cpu_count": 20,
+    "cuda": null,
+    "args": [
+        "--c",
+        "./configs/CUB200_SwinT.yaml"
+    ],
+    "state": "running",
+    "program": "D:\\documents\\SelfFiles\\zjut\\VIM\\code\\FGVC-PIM\\main.py",
+    "codePath": "main.py",
+    "host": "LAPTOP-O91CD9I8",
+    "username": "haisen",
+    "executable": "D:\\environment\\Anaconda3\\envs\\fgvc\\python.exe"
+}

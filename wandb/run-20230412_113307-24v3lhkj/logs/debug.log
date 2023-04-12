@@ -1,0 +1,39 @@
+2023-04-12 11:33:07,345 INFO    MainThread:24844 [wandb_setup.py:_flush():69] setting env: {}
+2023-04-12 11:33:07,345 INFO    MainThread:24844 [wandb_setup.py:_flush():69] setting login settings: {}
+2023-04-12 11:33:07,345 INFO    MainThread:24844 [wandb_setup.py:_flush():69] setting login settings: {'api_key': 'b2982700d8f4d6763be60822c2475d7f1a8d4b21'}
+2023-04-12 11:33:07,345 INFO    MainThread:24844 [wandb_init.py:_log_setup():357] Logging user logs to D:\documents\SelfFiles\zjut\VIM\code\FGVC-PIM\wandb\run-20230412_113307-24v3lhkj\logs\debug.log
+2023-04-12 11:33:07,345 INFO    MainThread:24844 [wandb_init.py:_log_setup():358] Logging internal logs to D:\documents\SelfFiles\zjut\VIM\code\FGVC-PIM\wandb\run-20230412_113307-24v3lhkj\logs\debug-internal.log
+2023-04-12 11:33:07,347 INFO    MainThread:24844 [wandb_init.py:init():390] calling init triggers
+2023-04-12 11:33:07,348 INFO    MainThread:24844 [wandb_init.py:init():395] wandb.init called with sweep_config: {}
+config: {'project_name': 'CUB200-T2', 'exp_name': 'T3000', 'c': './configs/CUB200_SwinT.yaml', 'train_root': './datas/train/', 'val_root': './datas/test/', 'data_size': 384, 'num_workers': 2, 'batch_size': 16, 'model_name': 'swin-t', 'optimizer': 'SGD', 'max_lr': 0.0005, 'wdecay': 0.0005, 'max_epochs': 50, 'warmup_batchs': 800, 'use_fpn': True, 'fpn_size': 1536, 'use_selection': True, 'num_classes': 200, 'num_selects': {'layer1': 2048, 'layer2': 512, 'layer3': 128, 'layer4': 32}, 'use_combiner': True, 'lambda_b': 0.5, 'lambda_s': 0.0, 'lambda_n': 5.0, 'lambda_c': 1.0, 'use_wandb': True, 'wandb_entity': 'poyung', 'pretrained': None, 'use_amp': True, 'update_freq': 2, 'log_freq': 100, 'eval_freq': 10, 'save_dir': './records/CUB200-T2/T3000/', 'device': device(type='cuda', index=0)}
+2023-04-12 11:33:07,348 INFO    MainThread:24844 [wandb_init.py:init():435] starting backend
+2023-04-12 11:33:07,348 INFO    MainThread:24844 [backend.py:_multiprocessing_setup():70] multiprocessing start_methods=spawn, using: spawn
+2023-04-12 11:33:07,351 INFO    MainThread:24844 [backend.py:ensure_launched():135] starting backend process...
+2023-04-12 11:33:07,418 INFO    MainThread:24844 [backend.py:ensure_launched():139] started backend process with pid: 17292
+2023-04-12 11:33:07,419 INFO    MainThread:24844 [wandb_init.py:init():440] backend started and connected
+2023-04-12 11:33:07,431 INFO    MainThread:24844 [wandb_init.py:init():499] updated telemetry
+2023-04-12 11:33:07,432 INFO    MainThread:24844 [wandb_init.py:init():522] communicating current version
+2023-04-12 11:33:08,961 INFO    MainThread:24844 [wandb_init.py:init():527] got version response upgrade_message: "wandb version 0.14.2 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2023-04-12 11:33:08,961 INFO    MainThread:24844 [wandb_init.py:init():535] communicating run to backend with 30 second timeout
+2023-04-12 11:33:38,968 INFO    MainThread:24844 [interface.py:_communicate_run():651] couldn't get run from backend
+2023-04-12 11:33:38,968 ERROR   MainThread:24844 [wandb_init.py:init():540] backend process timed out
+2023-04-12 11:33:38,968 ERROR   MainThread:24844 [wandb_init.py:init():549] encountered error: Error communicating with wandb process
+try: wandb.init(settings=wandb.Settings(start_method='fork'))
+or:  wandb.init(settings=wandb.Settings(start_method='thread'))
+For more info see: https://docs.wandb.ai/library/init#init-start-error
+2023-04-12 11:33:38,976 ERROR   MainThread:24844 [wandb_init.py:init():835] error
+Traceback (most recent call last):
+  File "D:\environment\Anaconda3\envs\fgvc\lib\site-packages\wandb\sdk\wandb_init.py", line 808, in init
+    run = wi.init()
+  File "D:\environment\Anaconda3\envs\fgvc\lib\site-packages\wandb\sdk\wandb_init.py", line 553, in init
+    backend.cleanup()
+  File "D:\environment\Anaconda3\envs\fgvc\lib\site-packages\wandb\sdk\backend\backend.py", line 167, in cleanup
+    self.interface.join()
+  File "D:\environment\Anaconda3\envs\fgvc\lib\site-packages\wandb\sdk\interface\interface.py", line 830, in join
+    _ = self._communicate(record)
+  File "D:\environment\Anaconda3\envs\fgvc\lib\site-packages\wandb\sdk\interface\interface.py", line 539, in _communicate
+    return self._communicate_async(rec, local=local).get(timeout=timeout)
+  File "D:\environment\Anaconda3\envs\fgvc\lib\site-packages\wandb\sdk\interface\interface.py", line 544, in _communicate_async
+    raise Exception("The wandb backend process has shutdown")
+Exception: The wandb backend process has shutdown

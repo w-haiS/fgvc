@@ -1,0 +1,126 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.12.4
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.9.16
+    start_time: 1681270387
+    t:
+      1:
+      - 1
+      - 5
+      3:
+      - 13
+      - 16
+      4: 3.9.16
+      5: 0.12.4
+      8:
+      - 3
+      - 5
+batch_size:
+  desc: null
+  value: 16
+c:
+  desc: null
+  value: ./configs/CUB200_SwinT.yaml
+data_size:
+  desc: null
+  value: 384
+device:
+  desc: null
+  value: cuda:0
+eval_freq:
+  desc: null
+  value: 10
+exp_name:
+  desc: null
+  value: T3000
+fpn_size:
+  desc: null
+  value: 1536
+lambda_b:
+  desc: null
+  value: 0.5
+lambda_c:
+  desc: null
+  value: 1.0
+lambda_n:
+  desc: null
+  value: 5.0
+lambda_s:
+  desc: null
+  value: 0.0
+log_freq:
+  desc: null
+  value: 100
+max_epochs:
+  desc: null
+  value: 50
+max_lr:
+  desc: null
+  value: 0.0005
+model_name:
+  desc: null
+  value: swin-t
+num_classes:
+  desc: null
+  value: 200
+num_selects:
+  desc: null
+  value:
+    layer1: 2048
+    layer2: 512
+    layer3: 128
+    layer4: 32
+num_workers:
+  desc: null
+  value: 2
+optimizer:
+  desc: null
+  value: SGD
+pretrained:
+  desc: null
+  value: null
+project_name:
+  desc: null
+  value: CUB200-T2
+save_dir:
+  desc: null
+  value: ./records/CUB200-T2/T3000/
+train_root:
+  desc: null
+  value: ./datas/train/
+update_freq:
+  desc: null
+  value: 2
+use_amp:
+  desc: null
+  value: true
+use_combiner:
+  desc: null
+  value: true
+use_fpn:
+  desc: null
+  value: true
+use_selection:
+  desc: null
+  value: true
+use_wandb:
+  desc: null
+  value: true
+val_root:
+  desc: null
+  value: ./datas/test/
+wandb_entity:
+  desc: null
+  value: poyung
+warmup_batchs:
+  desc: null
+  value: 800
+wdecay:
+  desc: null
+  value: 0.0005
